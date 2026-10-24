@@ -1,6 +1,6 @@
 {
   "name": "accessories-shop",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "نظام إدارة محل الإكسسوارات",
   "main": "main.js",
   "scripts": {
@@ -43,12 +43,16 @@
           ]
         }
       ],
-      "artifactName": "${productName}-${version}-${arch}-${target}.${ext}"
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
+      "createDesktopShortcut": true,
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}-${arch}.${ext}"
     }
   }
 }
